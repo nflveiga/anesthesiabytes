@@ -1,20 +1,11 @@
-<html>
-<head>
-    <title>AnesthesiaBytes Blog</title>
-</head>
-<body>
-    <div><h1>AHOY!!!</h1></div>
-    <div>
-    
+{% extends 'theblog/base.html' %}
+
+{% block content %}
     {% for post in posts %}
     <div>
     <p>Published:{{post.published_date}}</p>
-    <h2><a href="">{{post.title}}</a></h2>
+    <h2 class="titleClass"><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
     <p>{{post.text|linebreaksbr}}</p>
     </div>
     {% endfor %}
-    
-    
-    </div>
-</body>
-</html>
+{% endblock %}

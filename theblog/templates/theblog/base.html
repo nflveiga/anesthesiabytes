@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'theblog.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <title>AnesthesiaBytes Blog</title>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+  <h1 class="titleClass">AnesthesiaBytes</h1>
+    <p>Anesthesia: learning and living it...bit by bit</p> 
+  </div>
+
+
+    <div>
+    {% block content %}
+    {%  endblock %}
+    </div>
+</div>
+</body>
+</html>
